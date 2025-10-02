@@ -19,7 +19,11 @@ function App() {
       <Route path="/" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/verifyotp" element={<VerifyOtp />} />
-      <Route path="/dashboard" element={token ? <Dashboard /> : <Navigate to="/" />} />
+    <Route
+  path="/dashboard"
+  element={localStorage.getItem("token") ? <Dashboard /> : <Navigate to="/" />}
+/>
+
 
       <Route path="/book-list-page" element={token ? <BookListPage /> : <Navigate to="/" />} />
       <Route path="/add-book" element={token ? <AddBook /> : <Navigate to="/" />} />
