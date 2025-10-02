@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://shop-management-vert.vercel.app/api",
+  baseURL: "https://shop-management-pwpn.onrender.com/api",
 });
 
 API.interceptors.request.use((req) => {
